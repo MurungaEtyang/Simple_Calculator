@@ -1,16 +1,36 @@
-# This is a sample Python script.
+from Calculation import Calculation
+class MainWindow():
+    def __init__(self):
+        pass
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    def calculator(self):
+        print("Choose option \n")
+        print(["1. start a calculator", "0. Close the program"])
+
+        while True:
+            start = input("select option: ")
+
+            if start == '1':
+                while True:
+                    print(["1. Add", "2. Sub", "3. Mul", "4. Div"])
+                    maths_calculation = input("Select option: ")
+                    cal = Calculation(maths_calculation)
+                    if maths_calculation == "1":
+                        cal.__calculation__()
+                    elif maths_calculation == "2":
+                        cal.__calculation__()
+                    elif maths_calculation == "3":
+                        cal.__calculation__()
+                    elif maths_calculation == "4":
+                        cal.__calculation__()
+                    else:
+                        print("Wrong choice")
+            elif start == '0':
+                break
+            else:
+                print("Wrong option")
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    my_class = MainWindow()
+    print(my_class.calculator())
