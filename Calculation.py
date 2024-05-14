@@ -2,7 +2,7 @@ class Calculation:
     __option = ""
 
     def __init__(self, options):
-        self.__option == options
+        cal = self.__option == options
 
     def __calculation__(self):
         number1 = float(input("Enter first number: "))
